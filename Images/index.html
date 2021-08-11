@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li class="list active" data-filter="All"> All</li>
+            <li class="list" data-filter="Mobile"> Mobile</li>
+            <li class="list" data-filter="Computer"> Computer</li>
+            <li class="list" data-filter="Camera"> Camera</li>
+
+            <li class="list" data-filter="watch"> Watch</li>
+            <li class="list" data-filter="Headphone"> Headphone</li>
+
+        </ul>
+        <div class="product">
+            <div class="itemBox mobile">
+                <img src="mobile 1pg.png" alt="">
+
+            </div>
+            <div class="itemBox mobile">
+                <img src="images/mobile 2pg.jpg">
+
+            </div>
+            <div class="itemBox mobile ">
+                <img src="images/mobile pg 3.jpg " alt=" ">
+
+            </div>
+            <div class="itemBox mobile ">
+                <img src="images/mobile pg 4.jpg " alt=" ">
+
+            </div>
+            <div class="itemBox mobile ">
+                <img src="images/mobile pg 5.jpg " alt=" ">
+
+            </div>
+            <div class="itemBox Computer ">
+                <img src="images/computer 1pg.jpg " alt=" ">
+            </div>
+            <div class="itemBox Computer ">
+                <img src="images/copmuter pg 2.png" alt=" ">
+            </div>
+            <div class="itemBox Computer ">
+                <img src="images/computer pg 3.jfif" alt=" ">
+            </div>
+            <div class="itemBox Computer ">
+                <img src="images/computer pg 4.jpg" alt=" ">
+            </div>
+
+
+
+
+
+            <div class="itemBox Camera ">
+                <img src="images/camera 1pg.jpg " alt=" ">
+
+            </div>
+
+            <div class="itemBox Camera ">
+                <img src="images/camera pg 2.jpg" alt=" ">
+
+            </div>
+
+            <div class="itemBox Camera ">
+                <img src="images/camera pg 3.jpg" alt=" ">
+
+            </div>
+
+            <div class="itemBox Camera ">
+                <img src="images/camera pg 4.jfif" alt=" ">
+
+            </div>
+
+
+
+
+
+
+
+
+            <div class="itemBox watch ">
+                <img src="images/watch 1px.jpg " alt=" ">
+            </div>
+            <div class="itemBox watch ">
+                <img src="images/watch pg 2.jpg" alt=" ">
+            </div>
+            <div class="itemBox watch ">
+                <img src="images/watch pg 3.jfif" alt=" ">
+            </div>
+            <div class="itemBox watch ">
+                <img src="images/watch pg 4.jfif" alt=" ">
+            </div>
+            <div class="itemBox watch ">
+                <img src="images/watch pg 5.jfif" alt=" ">
+            </div>
+
+
+
+
+
+
+
+
+            <div class="itemBox Headphone ">
+                <img src="images/headphone 1pg.jpg " alt=" ">
+            </div>
+            <div class="itemBox Headphone ">
+                <img src="images/heaphone pg 2.jfif" alt=" ">
+            </div>
+            <div class="itemBox Headphone ">
+                <img src="images/head pg 4.jfif" alt=" ">
+            </div>
+            <div class="itemBox Headphone ">
+                <img src="images/head pg 5.jfif" alt=" ">
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.list').click(function() {
+                const value = $(this).attr('data-filter')
+                if (
+                    value == ('All')) {
+                    $('.itemBox').show('1000')
+                } else {
+                    $('.itemBox').not('.' + value).hide('1000');
+                    $('.itemBox').filter('.' + value).show('1000');
+                }
+
+            })
+            $('.list').click(function() {
+                $(this).addClass('.active').siblings().removeClass(('active'))
+            })
+        })
+    </script>
+</body>
+
+</html>
